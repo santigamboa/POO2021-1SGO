@@ -22,9 +22,18 @@ persona leerDatos(){
     return x;
 }
 
+void mostrarDatos( persona x ){
+    cout << "=====================" << endl;
+    cout << "DATOS DE LA PERSONA: " << endl;
+    cout << "=====================" << endl;
+    cout << "Edad: " << x.edad << endl;
+    cout << "sexo: " << x.sexo << endl;
+    cout << "Altura: " << x.altura << endl;
+}
+
 int main(){
     persona x;
     x = leerDatos();
-    
+    mostrarDatos( x );
     return 0;
 }
