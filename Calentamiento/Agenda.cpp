@@ -71,6 +71,9 @@ void mostrarMenu(){
     }while( opc != SALIR );
 }
 
+/*Es necesario que luego de "CREAR", se elija la opción "AGREGAR".
+De lo contrario, el contacto creado no será registrado en la agenda*/
+
 int main(){
     mostrarMenu();
     return 0;
