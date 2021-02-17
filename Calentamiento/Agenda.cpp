@@ -1,5 +1,6 @@
 #include<iostream>
 #include<string>
+#include<fstream>
 
 using namespace std;
 
@@ -25,6 +26,12 @@ void nuevoContacto( contacto &x ){
     cout << endl;
 }
 
+void agendarContacto( contacto x ){
+    ofstream f( "Agenda.txt", ios::app );
+    f << x.nombre << "\t" << x.apellido << "\t" << x.telefono << endl;
+    f.close();
+}
+
 void mostrarMenu(){
     int opc;
     contacto x;
@@ -42,6 +49,7 @@ void mostrarMenu(){
                 nuevoContacto( x );
                 break;
             case AGREGAR:
+                agendarContacto( x );
                 break;
             case VISUALIZAR:
                 break;
