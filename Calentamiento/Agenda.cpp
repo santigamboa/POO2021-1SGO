@@ -32,6 +32,16 @@ void agendarContacto( contacto x ){
     f.close();
 }
 
+void mostrarAgenda(){
+    ifstream f( "Agenda.txt" );
+    string x;
+    while( getline( f, x )){
+        cout << x;
+        cout << endl;
+    };
+    f.close();
+}
+
 void mostrarMenu(){
     int opc;
     contacto x;
@@ -47,11 +57,15 @@ void mostrarMenu(){
         switch( opc ){
             case CREAR:
                 nuevoContacto( x );
+                system( "PAUSE ");
                 break;
             case AGREGAR:
                 agendarContacto( x );
+                system( "PAUSE ");
                 break;
             case VISUALIZAR:
+                mostrarAgenda();
+                system( "PAUSE ");
                 break;
         }
     }while( opc != SALIR );

@@ -1,2 +1,5 @@
 NOMBRE	APELLIDO	TELEFONO
 san	gam	123
+ale	roa	323
+sin	cae	124
+cro	quo	342
