@@ -5,7 +5,7 @@ using namespace std;
 
 struct contacto{
     string nombre;
-    string apellidos;
+    string apellido;
     double telefono;
 };
 
@@ -19,7 +19,7 @@ void nuevoContacto( contacto &x ){
     getline( cin, x.nombre );
     cout << "Ingresa el/los apellido(s): ";
     //cin.ignore();
-    getline( cin, x.apellidos );
+    getline( cin, x.apellido );
     cout << "Ingresa el numero de telefono: ";
     cin >> x.telefono;
     cout << endl;
